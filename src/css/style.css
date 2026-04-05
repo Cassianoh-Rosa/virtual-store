@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#head{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    background-color: #5688f3;
+    margin-bottom: 40px;
+}
+#principal{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 15px;
+}
+div#search{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/4;
+    margin-right: 60px;
+    margin-left: 30px;
+    padding-bottom: 10px;
+    gap: 15px;
+    border-bottom: 1px solid blue;
+}
+div#products{
+    grid-column: 2/3;
+}
+img{
+    width: 200px;
+}
+.card{
+    background-color: rgb(62, 107, 146);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.171);
+}
+.card h2{
+    align-self: start;
+}
+.card .info-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 10px;
+}
