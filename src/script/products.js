@@ -1,35 +1,35 @@
 export const products = [
     {
         name:'Laptop',
-        img:"../images/laptop.png",
+        img:"/src/images/laptop.png",
         price: 700,
         category:'computers',
         id: 1
     },
     {
         name:'Cellphone',
-        img:"../images/cellphone.avif",
+        img:"/src/images/cellphone.avif",
         price: 600,
         category:'cellphones',
         id: 2
     },
     {
         name:'Case',
-        img:"../images/case.png",
+        img:"/src/images/case.png",
         price: 10,
         category:'cellphones',
         id: 3
     },
     {
         name:'Wristwatch',
-        img:"../images/watch.png",
+        img:"/src/images/watch.png",
         price: 80,
         category:'acessories',
         id: 4
     },
     {
         name:'Camera',
-        img:"../images/camera.png",
+        img:"/src/images/camera.png",
         price: 550,
         category:'cameras',
         id: 5
