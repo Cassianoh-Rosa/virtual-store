@@ -41,6 +41,7 @@ function updateList(array){
                 {id: obj.id}
             )
             updateCart()
+            updateTot()
         })
         const price = document.createElement('p')
         price.innerHTML =`${obj.price}$` 
@@ -57,17 +58,54 @@ function updateList(array){
 function updateCart(){
     let cart_list = document.querySelector('#List_cart')
     cart_list.innerHTML = ''
-    const cart_products = cart.forEach((obj)=>{
+
+        cart.forEach((obj)=>{
         const product = products.find((p)=> p.id === obj.id)
-        let item = document.createElement('li')
-        item.innerText = product.name
+
+        const container = document.createElement('div')
+
+        const tittle = document.createElement('h2')
+        tittle.innerText = product.name
+
+        const image = document.createElement('img')
+        image.src = product.img
+
+        const container_info = document.createElement('div')
+
         const remove_button = document.createElement('button')
+        remove_button.innerHTML = 'Delete'
         remove_button.addEventListener('click', () => {
         const index = cart.findIndex((item) => item.id === obj.id);
         cart.splice(index, 1);
         updateCart();
+        updateTot()
     });
 
+    const price = document.createElement('p')
+    price.innerText = `${product.price}$`
+
+    container.appendChild(tittle)
+    container.appendChild(image)
+    container_info.appendChild(price)
+    container_info.appendChild(remove_button)
+    container.appendChild(container_info)
+
+    document.querySelector('#List_cart').appendChild(container)
     })
+}
+function updateTot(){
+    const productsInCart = cart.map((obj)=>{
+      const sla = products.find((produto)=>{
+            if(produto.id === obj.id){
+                return produto
+            }
+        })
+        return sla
+    })
+    // só falta percorrer o array "productsInCart" somando todos os preços dos objetos nele
+    const soma = productsInCart.reduce((tot,obj)=>{
+      return tot+= obj.price
+    },0)
+    document.querySelector('#tot').innerText = soma
 }
 updateList(products)
