@@ -1,13 +1,13 @@
 export const products = [
     {
-        name:'Laptop',
+        name:'Positivo Laptop',
         img:"/src/images/laptop.png",
         price: 700,
         category:'computers',
         id: 1
     },
     {
-        name:'Cellphone',
+        name:'Motorola Cellphone',
         img:"/src/images/cellphone.avif",
         price: 600,
         category:'cellphones',
@@ -33,5 +33,26 @@ export const products = [
         price: 550,
         category:'cameras',
         id: 5
+    },
+    {
+        name:'Xaiomi Cellphone',
+        img:'/src/images/cellphone-xaiomi.webp',
+        price: 550,
+        category:'cellphones',
+        id:6
+    },
+    {
+        name:'Iphone 15',
+        img:'/src/images/cellphone-apple.png',
+        price: 700,
+        category:'cellphones',
+        id:7
+    },
+    {
+        name:'Thinkpad laptop',
+        img:'/src/images/laptop2.png',
+        price: 600,
+        category:'computers',
+        id:8
     }
 ]
