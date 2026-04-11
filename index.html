@@ -8,13 +8,23 @@
 </head>
 <body>
     <header id="head">
+
         <img src="src/images/kimbStore-logo.png" alt="Coca Store - logo" style="width: 120px;">
+
     </header>
 
+    <div id="cart">
+                <a href="#finalizar">
+                    <button>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </a>
+    </div>
+    
     <main id="principal">
         <div id="search">
             <div id="category">
-                <label for="categorias">Categorys</label>
+                <label for="categorias"><strong>Categorys</strong></label>
                 <select name="categorias" id="categorias" >
                     <option value="All" selected>All</option>
                     <option value="computers">Computers</option>
@@ -24,9 +34,11 @@
                 </select>
             </div>
 
-            <div id="cart">
-                <button>car</button>
+            <div>
+                <input type="search" name="" id="">
             </div>
+
+            
         </div>
         <div id="products">
 
@@ -56,11 +68,14 @@
             </div> -->
 
         </div>
-        <div class="finalizar">
-            <p id="tot">Total:</p>
-            <button id="finalizar">Finalizar compra</button>
+        <div id="finalizar">
+            <span>Total:</span>
+            <span id="tot"></span>
+            <span>$</span> 
+           <br> <button id="finalizar_button">Finalizar compra</button>
         </div>
     </article>
     <script src="src/script/script.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/385888c5f9.js" crossorigin="anonymous"></script>
 </body>
 </html>

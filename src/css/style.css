@@ -12,7 +12,7 @@ body {
 
 /* HEADER (sem logo, mais clean) */
 #head {
-    height: 80px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,9 @@ body {
     margin: auto;
     padding: 20px;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* FILTRO + BOTÃO */
 #search {
     display: flex;
@@ -45,6 +47,11 @@ body {
 }
 
 /* BOTÃO CARRINHO */
+#cart{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
 #cart button {
     padding: 10px 15px;
     border-radius: 8px;
@@ -54,10 +61,11 @@ body {
     cursor: pointer;
     transition: 0.2s;
 }
-
+#cart button i{
+    font-size: 20px;
+}
 #cart button:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
+    background: #0e96d5;
 }
 
 /* GRID DE PRODUTOS */
@@ -76,6 +84,7 @@ body {
     flex-direction: column;
     gap: 10px;
     transition: 0.2s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -145,11 +154,10 @@ body {
     background: #1e293b;
     padding: 10px;
     border-radius: 8px;
-   width: 450px;
-    
+    width: 250px;
 }
 #List_cart div div{
-    width: 440px;
+    width: 230px;
 }
 #List_cart{
     display: flex;
@@ -169,12 +177,25 @@ body {
 }
 
 /* TOTAL */
-.finalizar {
+#finalizar {
     margin-top: 20px;
     border-top: 1px solid #1e293b;
     padding-top: 10px;
 }
-
+#finalizar_button{
+    padding: 10px;
+    background-color: #0ea5e9;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    transition-duration: 0.3s;
+    margin-top: 10px;
+}
+#finalizar_button:hover{
+    transform: translateY(-2px);
+    background-color: #19294d;
+    color: white;
+}
 #tot {
     font-weight: bold;
     margin-bottom: 10px;
@@ -182,5 +203,32 @@ body {
 
 /* RESPONSIVO */
 @media screen and (min-width: 768px) {
-    
+    body{
+        display: grid;
+        grid-template-rows: 100px auto;
+        grid-template-columns: 0.5fr 5fr 3fr 0.5fr;
+        gap: 10px;
+    }
+
+    #head {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+
+    #principal{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    #carrinho{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        width: 100%;
+        border-radius: 8px;
+    }
+    #cart button{
+        display: none;
+    }
 }
