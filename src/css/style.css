@@ -238,3 +238,15 @@ html{
         display: none;
     }
 }
+.cont_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.price_cart{
+    font-weight: bold;
+    color: green;
+}
+.strong{
+    font-weight: bold;
+}

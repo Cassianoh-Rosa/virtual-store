@@ -78,10 +78,11 @@ function updateCart(){
 
         const quantity = obj.quantity
         const qtyText = document.createElement('p')
-        qtyText.innerText = `Qtd: ${quantity}`  
+        qtyText.innerText = `Qtd: ${quantity}` 
+        qtyText.classList.add('strong') 
 
         const container_info = document.createElement('div')
-
+        container_info.classList.add('cont_info')
         const remove_button = document.createElement('button')
         remove_button.innerText = 'Delete'
         remove_button.addEventListener('click', () => {
@@ -99,6 +100,7 @@ function updateCart(){
 
         const price = document.createElement('p')
         price.innerText = `${product.price}$`
+        price.classList.add('price_cart')
 
         container.appendChild(tittle)
         container.appendChild(image)
@@ -134,6 +136,17 @@ function handleSearch(){
 function saveCart(){
     localStorage.setItem('cart', JSON.stringify(cart))
 }
+
+document.querySelector('#finalizar_button').addEventListener('click', ()=>{
+    if(cart.length>0){
+    cart = []
+    updateCart()
+    updateTot()
+    saveCart()
+
+    alert('Compra finalizada!')
+    }
+})
 
 updateList(products)
 updateCart()
