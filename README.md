@@ -8,7 +8,7 @@ Projeto de uma loja virtual(fícticia) chamada "Kimb Store" com Produtos eletrô
 - remoção/adição de determinados produtos de sua escolha em seu carrinho.
 - responsividade para diferentes dispositivos.
 
-#🛠️ Tecnologias
+# 🛠️ Tecnologias
 - HTML5
 - CSS3
 - JavaScript
